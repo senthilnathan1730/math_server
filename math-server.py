@@ -18,7 +18,7 @@ class ProcessOutputThread(Thread): #OOPS
 				self.conn.sendall(self.proc.stdout.readline())
 			except:
 				pass
-			
+	#senthil		
 class MathServerCommunicationThread(Thread):
 	def __init__(self, conn, addr):
 		Thread.__init__(self)
@@ -68,4 +68,5 @@ while True: # To accept many incoming connections.
 	conn, addr = s.accept() # Open door
 	start_new_math_thread(conn, addr)
 s.close()
+
 
